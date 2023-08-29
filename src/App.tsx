@@ -1,12 +1,15 @@
-import { Landing } from "./components/Landing/Landing";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
-    <>
-      <div>
-        <Landing />
-      </div>
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 

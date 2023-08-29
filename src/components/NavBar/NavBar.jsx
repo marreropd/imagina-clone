@@ -1,7 +1,9 @@
 import { GrSearch } from "react-icons/gr";
+import { Link } from "react-router-dom";
+
 export const NavBar = () => {
   return (
-    <div className="px-10 bg-white h-20 flex  items-center">
+    <div className="px-10 bg-white h-20 flex items-center navbar w-screen">
       {/*  nav first section */}
       <div className="flex items-center flex-row space-x-9">
         <div className="logo">
@@ -11,7 +13,7 @@ export const NavBar = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 110 20"
-              class="plasmic-default__svg plasmic_imagina_formacion_landing_components_all__fiRTt PlasmicImaginaLogo_svg__az64T"
+              className="plasmic-default__svg plasmic_imagina_formacion_landing_components_all__fiRTt PlasmicImaginaLogo_svg__az64T"
               role="img"
             >
               <path
@@ -35,8 +37,8 @@ export const NavBar = () => {
                   y2="-3.787"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#20BEFD"></stop>
-                  <stop offset="1" stop-color="#238DFB"></stop>
+                  <stop stopColor="#20BEFD"></stop>
+                  <stop offset="1" stopColor="#238DFB"></stop>
                 </linearGradient>
                 <linearGradient
                   id="FZorY8hVsb"
@@ -46,8 +48,8 @@ export const NavBar = () => {
                   y2="3278.62"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#20BEFD"></stop>
-                  <stop offset="1" stop-color="#238DFB"></stop>
+                  <stop stopColor="#20BEFD"></stop>
+                  <stop offset="1" stopColor="#238DFB"></stop>
                 </linearGradient>
               </defs>
             </svg>
@@ -61,6 +63,10 @@ export const NavBar = () => {
             placeholder="Buscar cursos"
           ></input>
         </div>
+      </div>
+      {/*  nav second section */}
+      <div>
+        <Link to={""}>hola</Link>
       </div>
     </div>
   );
