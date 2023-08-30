@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <div className="px-10 bg-white h-20 flex items-center navbar w-screen">
+    <div className="px-10 bg-white h-20 flex items-center navbar w-screen ">
       {/*  nav first section */}
-      <div className="flex items-center flex-row space-x-9">
+      <div className="flex items-center flex-row  space-x-9">
         <div className="logo">
           {" "}
           <div className="w-[110px]">
@@ -55,18 +55,37 @@ export const NavBar = () => {
             </svg>
           </div>
         </div>
-        <div className="input flex text-base 	items-center space-x-3">
+        <div className="input flex text-base 	items-center space-x-2 w-52">
           <GrSearch />
           <input
-            className="text-base"
+            className="text-base w-2/3"
             title="input"
             placeholder="Buscar cursos"
           ></input>
         </div>
       </div>
       {/*  nav second section */}
-      <div>
-        <Link to={""}>hola</Link>
+      <div className="flex items-center space-x-9 text-sm font-semibold">
+        <Link
+          to={""}
+          type="button"
+          className="bg-[#FCFF58] py-px px-1 rounded font-bold 
+          "
+        >
+          CATÁLOGO 2023
+        </Link>
+        <Link to={""} c>
+          ¡Últimas plazas!
+        </Link>
+        <Link to={""}>Cursos</Link>
+        <Link to={""}>Servicios</Link>
+        <Link to={""}>FUNDAE</Link>
+        <Link
+          to={""}
+          className="bg-[#0fddab] py-4 px-12 rounded-lg font-semibold text-white"
+        >
+          Solicitar informacion
+        </Link>
       </div>
     </div>
   );
