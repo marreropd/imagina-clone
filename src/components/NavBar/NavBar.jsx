@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <div className="px-10 bg-white h-20 flex items-center navbar w-screen ">
+    <div className="px-14 bg-white h-20 flex items-center navbar sticky top-0 w-full">
       {/*  nav first section */}
       <div className="flex items-center flex-row  space-x-9">
         <div className="logo">
@@ -55,7 +55,7 @@ export const NavBar = () => {
             </svg>
           </div>
         </div>
-        <div className="input flex text-base 	items-center space-x-2 w-52">
+        <div className="input flex text-base 	items-center space-x-2 w-52 flex-1">
           <GrSearch />
           <input
             className="text-base w-2/3"
@@ -65,7 +65,7 @@ export const NavBar = () => {
         </div>
       </div>
       {/*  nav second section */}
-      <div className="flex items-center space-x-9 text-sm font-semibold">
+      <div className="flex items-center justify-evenly text-sm font-semibold w-full">
         <Link
           to={""}
           type="button"
@@ -74,15 +74,13 @@ export const NavBar = () => {
         >
           CATÁLOGO 2023
         </Link>
-        <Link to={""} c>
-          ¡Últimas plazas!
-        </Link>
+        <Link to={""}>¡Últimas plazas!</Link>
         <Link to={""}>Cursos</Link>
         <Link to={""}>Servicios</Link>
         <Link to={""}>FUNDAE</Link>
         <Link
           to={""}
-          className="bg-[#0fddab] py-4 px-12 rounded-lg font-semibold text-white"
+          className="bg-[#0fddab] py-3 px-12 rounded-lg font-semibold text-white"
         >
           Solicitar informacion
         </Link>
