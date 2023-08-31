@@ -70,7 +70,7 @@ export const NavBar = () => {
         <Link
           to={""}
           type="button"
-          className=" bg-[#FCFF58] py-px px-1 rounded font-bold 
+          className="get-catalog-button-effect kreep  bg-[#FCFF58] py-px px-1 rounded font-bold 
           "
         >
           CATÁLOGO 2023
@@ -89,7 +89,7 @@ export const NavBar = () => {
         </Link>
         <Link
           to={""}
-          className="bg-[#0fddab] py-3 px-12 rounded-lg font-semibold text-white"
+          className="get-info-button-effect bg-[#0fddab] py-3 px-12 rounded-lg font-semibold text-white"
         >
           Solicitar informacion
         </Link>

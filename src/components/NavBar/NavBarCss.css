@@ -4,11 +4,11 @@
     color: #022d42;
   }
 
-  .hover-underline-animation:hover{
+.hover-underline-animation:hover{
     color: #085a84;
   }
   
-  .hover-underline-animation::after {
+.hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -21,8 +21,40 @@
     transition: transform 0.25s ease-out;
   }
 
-
-  .hover-underline-animation:hover::after {
+.hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+.get-info-button-effect {
+    transition: all 0.2s ease-in-out;
+  }
+.get-info-button-effect:hover{
+    box-shadow: 0 5px 15px rgba(15, 221, 171, 0.4);
+}
+
+.get-catalog-button-effect {
+    transition: all 0.5s ease;
+  }
+.get-catalog-button-effect:hover{
+    background-color: #ba830b;
+    color: white;
+    transform: translateX(-1px) scale(1.03);
+}
+
+@keyframes kreep {
+    0% {-webkit-transform:  translatey(-2px);;
+        transform:  translatey(-5px);}
+   50% { -webkit-transform:  translatey(-4px);}
+   70% { -webkit-transform:  translatey(5px);;
+         transform:  translatey(0px);}
+}
+
+.kreep {
+    display: inline-block;
+    animation-name: kreep;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-delay: 90s;
+    animation-iteration-count: infinite;
   }
