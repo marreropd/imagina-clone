@@ -4,7 +4,7 @@ import "./NavBarCss.css";
 
 export const NavBar = () => {
   return (
-    <div className="px-14 bg-white h-20 flex items-center navbar sticky top-0 w-full">
+    <div className="px-14 bg-white h-20 flex items-center navbar sticky top-0 w-full z-50">
       {/*  nav first section */}
       <div className="flex items-center flex-row  space-x-9">
         <div className="logo">
