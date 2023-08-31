@@ -5,8 +5,11 @@ import { hardCodedAdvantages as advantages } from "../../utils/hardCodedAdvatage
 export const AdvantagesSection = () => {
   return (
     <div>
-      <div className="text-center p-9">
-        <h1>Ventajas de Nuestros Cursos Online</h1>
+      <div className="text-center mt-32 mb-9">
+        <h2 className="font-bold text-black text-4xl">
+          Ventajas de Nuestros{" "}
+          <span className="text-violet-800">Cursos Online</span>
+        </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="p-3 border rounded-lg shadow h-min rounded">
@@ -14,11 +17,13 @@ export const AdvantagesSection = () => {
             {advantages.map((advantages: IAdvatages) => {
               return (
                 <div className="flex p-6">
-                  <div className="text-start text-violet-800 -mt-3 mr-1">
+                  <div className="text-start text-violet-800 -mt-2 mr-1">
                     {advantages.icon as ReactNode}
                   </div>
                   <div>
-                    <h1 className="font-bold text-black">{advantages.title}</h1>
+                    <h2 className="font-bold text-black text-lg">
+                      {advantages.title}
+                    </h2>
                     <div className=" text-black">{advantages.description}</div>
                   </div>
                 </div>
