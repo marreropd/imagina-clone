@@ -2,7 +2,7 @@ import "./slideTrackerCss.scss";
 export const SlideTracker = () => {
   return (
     <div>
-      <div className="slider  w-screen">
+      <div className="slider w-[99%] ">
         <div className="slide-track">
           <div className="slide">
             <img
