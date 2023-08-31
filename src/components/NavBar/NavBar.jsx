@@ -1,5 +1,6 @@
 import { GrSearch } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import "./NavBarCss.css";
 
 export const NavBar = () => {
   return (
@@ -69,15 +70,23 @@ export const NavBar = () => {
         <Link
           to={""}
           type="button"
-          className="bg-[#FCFF58] py-px px-1 rounded font-bold 
+          className=" bg-[#FCFF58] py-px px-1 rounded font-bold 
           "
         >
           CATÁLOGO 2023
         </Link>
-        <Link to={""}>¡Últimas plazas!</Link>
-        <Link to={""}>Cursos</Link>
-        <Link to={""}>Servicios</Link>
-        <Link to={""}>FUNDAE</Link>
+        <Link to={""} className="hover-underline-animation">
+          ¡Últimas plazas!
+        </Link>
+        <Link to={""} className="hover-underline-animation">
+          Cursos
+        </Link>
+        <Link to={""} className="hover-underline-animation">
+          Servicios
+        </Link>
+        <Link to={""} className="hover-underline-animation">
+          FUNDAE
+        </Link>
         <Link
           to={""}
           className="bg-[#0fddab] py-3 px-12 rounded-lg font-semibold text-white"
