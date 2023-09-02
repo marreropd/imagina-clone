@@ -1,6 +1,6 @@
 import { GrSearch } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import "./NavBarCss.css";
+import "./NavBarStyles.css";
 
 export const NavBar = () => {
   return (
@@ -89,7 +89,7 @@ export const NavBar = () => {
         </Link>
         <Link
           to={""}
-          className="get-info-button-effect bg-[#0fddab] py-3 px-12 rounded-lg font-semibold text-white"
+          className="get-button-effect-green bg-[#0fddab] py-3 px-12 rounded-lg font-semibold text-white"
         >
           Solicitar informacion
         </Link>

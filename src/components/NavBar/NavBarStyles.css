@@ -25,10 +25,10 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-.get-info-button-effect {
+.get-button-effect-green {
     transition: all 0.2s ease-in-out;
   }
-.get-info-button-effect:hover{
+.get-button-effect-green:hover{
     box-shadow: 0 5px 15px rgba(15, 221, 171, 0.4);
 }
 

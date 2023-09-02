@@ -1,4 +1,4 @@
-import "./slideTrackerCss.scss";
+import "./slideTrackerStyles.scss";
 export const SlideTracker = () => {
   return (
     <div>
