@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
 import { IAdvatages } from "../../utils/IAdvantages";
 import { hardCodedAdvantages as advantages } from "../../utils/hardCodedAdvatages";
-
+import { Link } from "react-router-dom";
+import "./AdvantagesSectionStyles.css";
 export const AdvantagesSection = () => {
   return (
-    <div>
+    <div className="bg-[#ECEF5]">
       <div className="text-center mt-32 mb-9">
         <h2 className="font-bold text-black text-4xl">
           Ventajas de Nuestros{" "}
@@ -32,6 +33,14 @@ export const AdvantagesSection = () => {
           </p>
         </div>
         <div className="border bg-center rounded-lg shadow h-min[610px] self-center max-w-screen-md bg-cover bg-no-repeat h-[610px] w-[510px] bg-[url('https://imaginaformacion.com/plasmic/imagina_formacion_landing_components/images/onlineVentajaswebp.webp')]	"></div>
+      </div>
+      <div className="text-center p-14">
+        <Link
+          to={""}
+          className="get-button-effect-blue bg-[#081838] py-3 px-12 rounded-lg font-semibold text-white"
+        >
+          Solicitar informacion
+        </Link>
       </div>
     </div>
   );

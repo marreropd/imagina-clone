@@ -1,0 +1,6 @@
+.get-button-effect-blue {
+    transition: all 0.2s ease-in-out;
+  }
+.get-button-effect-blue:hover{
+    box-shadow: 0 5px 15px #0d1d3f54;
+}
