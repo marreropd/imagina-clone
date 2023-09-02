@@ -1,6 +1,17 @@
+import { hardCodedCourses } from "../../utils/hardCodedCourses";
 import { VirtualAulaSummary } from "../other/VirtualAulaSummary/VirtualAulaSummary";
+import _ from "lodash";
 
 export const CoursesSection = () => {
+  const filteredCoursesByDate = () => {
+    const groupedByDate = _.groupBy(
+      hardCodedCourses,
+      ({ nextStartDate }) => nextStartDate
+    );
+    console.log(groupedByDate);
+  };
+
+  filteredCoursesByDate();
   return (
     <div className="bg-[#081838] h-[25rem] py-3">
       <div className="text-center mt-20  ">
