@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { NavBar } from "../NavBar/NavBar";
 import { SlideTracker } from "../other/slideTracker/SlideTracker";
 import { AdvantagesSection } from "../AdvantagesSecttion/AdvantagesSection";
+import { VirtualAulaSummary } from "../other/VirtualAulaSummary/VirtualAulaSummary";
+import { CoursesSection } from "../CoursesSection/CoursesSection";
 
 export const Landing = () => {
   return (
@@ -16,17 +18,7 @@ export const Landing = () => {
           >
             <h2 className="font-semibold">Modalidad Online</h2>
           </div>
-
-          <div className="text-base w-3/4	text-center mt-10">
-            <p>
-              A continuación te mostramos las convocatorias de nuestros cursos
-              online. En caso de querer formar a un grupo de trabajadores, te
-              recomendamos nuestra modalidad{" "}
-              <Link className="font-semibold underline underline">
-                Aula Virtual Personalizada
-              </Link>
-            </p>
-          </div>
+          <VirtualAulaSummary />
         </div>
       </section>
 
@@ -34,8 +26,12 @@ export const Landing = () => {
         <SlideTracker />
       </section>
 
-      <section className="grid place-items-center h-96 px-24">
+      <section className="grid place-items-center  px-24">
         <AdvantagesSection />
+      </section>
+
+      <section>
+        <CoursesSection />
       </section>
     </>
   );
