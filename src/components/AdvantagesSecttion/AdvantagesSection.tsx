@@ -3,13 +3,24 @@ import { IAdvatages } from "../../utils/IAdvantages";
 import { hardCodedAdvantages as advantages } from "../../utils/hardCodedAdvatages";
 import { Link } from "react-router-dom";
 import "./AdvantagesSectionStyles.css";
-export const AdvantagesSection = () => {
+
+type AdvantagesProp = {
+  generalColor: string;
+  imageUrl: string;
+  buttonText: string;
+};
+
+export const AdvantagesSection = ({
+  generalColor,
+  imageUrl,
+  buttonText,
+}: AdvantagesProp) => {
   return (
     <div className="bg-[#ECEF5]">
       <div className="text-center mt-32 mb-9">
         <h2 className="font-bold text-black text-4xl">
           Ventajas de Nuestros{" "}
-          <span className="text-violet-800">Cursos Online</span>
+          <span className={generalColor}>Cursos Online</span>
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -18,7 +29,7 @@ export const AdvantagesSection = () => {
             {advantages.map((advantages: IAdvatages) => {
               return (
                 <span className="flex p-6" key={advantages.title}>
-                  <span className="text-start text-violet-800 -mt-2 mr-1">
+                  <span className={`text-start ${generalColor} -mt-2 mr-1`}>
                     {advantages.icon as ReactNode}
                   </span>
                   <span>
@@ -34,14 +45,16 @@ export const AdvantagesSection = () => {
             })}
           </div>
         </div>
-        <div className="border bg-center rounded-lg shadow h-min[610px] self-center max-w-screen-md bg-cover bg-no-repeat h-[610px] w-[510px] bg-[url('https://imaginaformacion.com/plasmic/imagina_formacion_landing_components/images/onlineVentajaswebp.webp')]	"></div>
+        <div
+          className={`border bg-center rounded-lg shadow h-min[610px] self-center max-w-screen-md bg-cover bg-no-repeat h-[610px] w-[510px] bg-[url('${imageUrl}')]`}
+        ></div>
       </div>
       <div className="text-center p-14">
         <Link
           to={""}
           className="get-button-effect-blue bg-[#081838] py-3 px-12 rounded-lg font-semibold text-white"
         >
-          Solicitar informacion
+          {buttonText}
         </Link>
       </div>
     </div>

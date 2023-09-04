@@ -27,11 +27,27 @@ export const Landing = () => {
       </section>
 
       <section className="grid place-items-center  px-24">
-        <AdvantagesSection />
+        <AdvantagesSection
+          generalColor={"text-violet-800"}
+          imageUrl={
+            "https://imaginaformacion.com/plasmic/imagina_formacion_landing_components/images/onlineVentajaswebp.webp"
+          }
+          buttonText="Solicitar información"
+        />
       </section>
 
       <section>
         <CoursesSection />
+      </section>
+
+      <section className="grid place-items-center px-24">
+        <AdvantagesSection
+          generalColor={"text-[#27ceb0]"}
+          imageUrl={
+            "https://imaginaformacion.com/plasmic/imagina_formacion_landing_components/images/onlineVentajaswebp.webp"
+          }
+          buttonText="¡Me interesa!"
+        />
       </section>
     </>
   );
