@@ -71,15 +71,15 @@ export const hardCodedCourses: ICourses[] = [
     id: 7,
     title: "Curso Online de Python",
     courseImage:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e1/Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/182px-Python-logo-notext.svg.png",
     nextStartDate: new Date("2023-09-17"),
     bonus: "100%",
-    duration: 60,
-    placesAvaiables: 5,
+    duration: 30,
+    placesAvaiables: 12,
     isLimitedPlaces: true,
   },
   // 21 jan
-  {
+  /* {
     id: 8,
     title: "Curso Online de Kotlin",
     courseImage:
@@ -124,5 +124,5 @@ export const hardCodedCourses: ICourses[] = [
     duration: 60,
     placesAvaiables: 5,
     isLimitedPlaces: true,
-  },
+  }, */
 ];
