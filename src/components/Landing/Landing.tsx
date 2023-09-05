@@ -4,6 +4,8 @@ import { SlideTracker } from "../other/slideTracker/SlideTracker";
 import { AdvantagesSection } from "../AdvantagesSecttion/AdvantagesSection";
 import { VirtualAulaSummary } from "../other/VirtualAulaSummary/VirtualAulaSummary";
 import { CoursesSection } from "../CoursesSection/CoursesSection";
+import { CollapseFAQ } from "../CollapseFAQ/CollapseFAQ";
+import { faqs } from "../../utils/hardCodedFAQ";
 
 export const Landing = () => {
   return (
@@ -26,7 +28,7 @@ export const Landing = () => {
         <SlideTracker />
       </section>
 
-      <section className="grid place-items-center  px-24">
+      <section className="grid place-items-center px-24 bg-[#ECEFF5]">
         <AdvantagesSection
           generalColor={"text-violet-800"}
           imageUrl={
@@ -40,7 +42,7 @@ export const Landing = () => {
         <CoursesSection />
       </section>
 
-      <section className="grid place-items-center px-24">
+      <section className="grid place-items-center px-24 bg-[#ECEFF5]">
         <AdvantagesSection
           generalColor={"text-[#27ceb0]"}
           imageUrl={
@@ -48,6 +50,15 @@ export const Landing = () => {
           }
           buttonText="¡Me interesa!"
         />
+      </section>
+
+      <section className="px-16 py-10">
+        <div className="text-center py-10 text-4xl font-semibold">
+          <h3>FAQS - Preguntas Frecuentes</h3>
+        </div>
+        {faqs.map((faq) => {
+          return <CollapseFAQ title={faq.title} content={faq.content} />;
+        })}
       </section>
     </>
   );
