@@ -16,16 +16,16 @@ export const AdvantagesSection = ({
   buttonText,
 }: AdvantagesProp) => {
   return (
-    <div className="bg-[#ECEF5]">
+    <div className="">
       <div className="text-center mt-32 mb-9">
         <h2 className="font-bold text-black text-4xl">
           Ventajas de Nuestros{" "}
           <span className={generalColor}>Cursos Online</span>
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="p-3 border rounded-lg shadow h-min rounded">
-          <div className="font-normal text-gray-700 dark:text-gray-400">
+      <div className="grid grid-cols-1 md:grid-cols-2 ">
+        <div className="p-3 rounded-lg shadow h-min rounded bg-white">
+          <div className="font-normal text-gray-700 dark:text-gray-400 ">
             {advantages.map((advantages: IAdvatages) => {
               return (
                 <span className="flex p-6" key={advantages.title}>
@@ -46,7 +46,9 @@ export const AdvantagesSection = ({
           </div>
         </div>
         <div
-          className={`border bg-center rounded-lg shadow h-min[610px] self-center max-w-screen-md bg-cover bg-no-repeat h-[610px] w-[510px] bg-[url('${imageUrl}')]`}
+          className={`
+          bg-[url('https://imaginaformacion.com/plasmic/imagina_formacion_landing_components/images/onlineVentajaswebp.webp')]
+          border bg-center rounded-lg shadow h-min[610px] self-center max-w-screen-md bg-cover bg-no-repeat h-[610px] w-[510px] `}
         ></div>
       </div>
       <div className="text-center p-14">
