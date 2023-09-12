@@ -24,7 +24,7 @@ export const CoursesSection = () => {
   const formatDateToShow = (date: Date | undefined) => {
     const month = dayjs(date, "es").format("MMMM");
     const day = dayjs(date, "es").format("DD");
-    const firstThreeLettersMonth = month.slice(0, 4).toUpperCase();
+    const firstThreeLettersMonth = month.slice(0, 3).toUpperCase();
 
     return `${day} ${firstThreeLettersMonth}`;
   };
@@ -48,33 +48,37 @@ export const CoursesSection = () => {
       </div>
 
       <div className="mx-24 py-10">
-        {courses?.map((element) => {
+        {courses?.map((element, i) => {
           return (
             <>
-              <div
-                className="flex items-center py-2"
-                key={`${
-                  element.bonus +
-                  element.id +
-                  element.nextStartDate +
-                  Math.random()
-                }`}
-              >
-                <div className="bg-[#5c59e3] text-xl text-white round-left rounded-s-lg p-1 px-2 font-bold">
-                  {formatDateToShow(element.nextStartDate)}
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMinYMin slice"
-                  viewBox="0 0.4 16 30"
-                  height="2.2em"
-                  width="1.4em"
-                  className="plasmic-default__svg plasmic_imagina_formacion_landing_components_all__fiRTt PlasmicConvocatoriasItemFecha_arrowShape__n0Zyr"
-                  style={{ fill: "#5c59e3" }}
+              {i === 0 && (
+                <div
+                  className="flex items-center py-2"
+                  key={`${
+                    element.bonus +
+                    element.id +
+                    element.next_start_date +
+                    Math.random()
+                  }`}
                 >
-                  <path d="M13.348 12.013L0 0v27l13.348-12.013a2 2 0 000-2.974z"></path>
-                </svg>
-              </div>
+                  {
+                    <div className="bg-[#5c59e3] text-xl text-white round-left rounded-s-lg p-1 px-2 font-bold">
+                      {formatDateToShow(element.next_start_date)}
+                    </div>
+                  }
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMinYMin slice"
+                    viewBox="0 0.4 16 30"
+                    height="2.2em"
+                    width="1.4em"
+                    className="plasmic-default__svg plasmic_imagina_formacion_landing_components_all__fiRTt PlasmicConvocatoriasItemFecha_arrowShape__n0Zyr"
+                    style={{ fill: "#5c59e3" }}
+                  >
+                    <path d="M13.348 12.013L0 0v27l13.348-12.013a2 2 0 000-2.974z"></path>
+                  </svg>
+                </div>
+              )}
               <div className="flex sm:flex-row bg-white rounded-md flex-col py-3 mb-3">
                 {/* COL1 */}
                 <div className="basis-[12%] flex items-center justify-center">
@@ -96,17 +100,17 @@ export const CoursesSection = () => {
                     </div>
                     <div className="bg-[#081838] text-sm ms-[1rem] py-2.5 rounded-md font-medium text-white w-[12rem] text-center">
                       %{" "}
-                      {element.isLimitedPlaces
+                      {element.is_limited_places
                         ? "Plazas ilimitadas"
-                        : element.placesAvaiables + " Plazas"}
+                        : element.places_avaiables + " Plazas"}
                     </div>
                     <div className="bg-[#081838] text-sm ms-[1rem] py-2.5 rounded-md font-medium text-white w-[12rem] text-center">
                       % Hasta {element.bonus} bonificable
                     </div>
                     <div className="bg-[#ddff0f] text-xs ms-[1rem] py-2.5 rounded-md font-semibold w-[8rem] text-center ">
-                      {(element.placesAvaiables as number) < 10
+                      {(element.places_avaiables as number) < 10
                         ? "¡ÚLTIMAS PLAZAS!"
-                        : element.placesAvaiables + " Plazas Disponibles"}
+                        : element.places_avaiables + " Plazas Disponibles"}
                     </div>
                   </div>
                 </div>

@@ -3,8 +3,8 @@ export interface ICourses {
   course_image: string;
   title: string;
   duration: number;
-  isLimitedPlaces?: boolean;
+  is_limited_places?: boolean;
   bonus: string;
-  placesAvaiables?: number;
-  nextStartDate?: Date;
+  places_avaiables?: number;
+  next_start_date?: Date;
 }
