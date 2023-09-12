@@ -16,7 +16,7 @@ export const CollapseFAQ = ({ title, content }: CollapseFAQProps) => {
 
           <Accordion.Content className="border border-black ">
             <p className="mb-2 ms-3 text-gray-500 dark:text-gray-400 ">
-              <p>{content}</p>
+              {content}
             </p>
           </Accordion.Content>
         </Accordion.Panel>

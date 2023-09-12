@@ -1,6 +1,6 @@
 export interface ICourses {
   id: number;
-  courseImage: string;
+  course_image: string;
   title: string;
   duration: number;
   isLimitedPlaces?: boolean;

@@ -1,16 +1,25 @@
 import { useEffect, useState } from "react";
-import { hardCodedCourses } from "../../utils/hardCodedCourses";
+
 import { VirtualAulaSummary } from "../other/VirtualAulaSummary/VirtualAulaSummary";
 import _ from "lodash";
 import * as dayjs from "dayjs";
-
+import { ICourses } from "../../utils/ICourses";
+import axios from "axios";
 export const CoursesSection = () => {
-  /*   const [courses, setCourses] = useState<object | undefined>(undefined);
+  const [courses, setCourses] = useState<Array<ICourses>>(new Array());
+
   useEffect(() => {
-    const groupedByDate = _.mapValues(
-      _.groupBy(hardCodedCourses, ({ nextStartDate }) => nextStartDate)
-    );
-  }, []); */
+    fetchCourses();
+  }, []);
+
+  const fetchCourses = async () => {
+    const data = await axios
+      .get("http://127.0.0.1:3333/api/courses/show")
+      .then((response) => response.data);
+    console.log(data);
+
+    setCourses(data);
+  };
 
   const formatDateToShow = (date: Date | undefined) => {
     const month = dayjs(date, "es").format("MMMM");
@@ -39,10 +48,18 @@ export const CoursesSection = () => {
       </div>
 
       <div className="mx-24 py-10">
-        {hardCodedCourses.map((element) => {
+        {courses?.map((element) => {
           return (
             <>
-              <div className="flex items-center py-2">
+              <div
+                className="flex items-center py-2"
+                key={`${
+                  element.bonus +
+                  element.id +
+                  element.nextStartDate +
+                  Math.random()
+                }`}
+              >
                 <div className="bg-[#5c59e3] text-xl text-white round-left rounded-s-lg p-1 px-2 font-bold">
                   {formatDateToShow(element.nextStartDate)}
                 </div>
@@ -62,7 +79,7 @@ export const CoursesSection = () => {
                 {/* COL1 */}
                 <div className="basis-[12%] flex items-center justify-center">
                   <img
-                    src={element.courseImage}
+                    src={element.course_image}
                     alt="course-image"
                     width={70}
                   />

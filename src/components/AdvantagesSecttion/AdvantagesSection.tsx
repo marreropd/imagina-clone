@@ -24,7 +24,7 @@ export const AdvantagesSection = ({
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 ">
-        <div className="p-3 rounded-lg shadow h-min rounded bg-white">
+        <div className="p-3 rounded-lg shadow h-min bg-white">
           <div className="font-normal text-gray-700 dark:text-gray-400 ">
             {advantages.map((advantages: IAdvatages) => {
               return (
