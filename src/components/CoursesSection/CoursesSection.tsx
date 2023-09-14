@@ -47,7 +47,7 @@ export const CoursesSection = () => {
         <VirtualAulaSummary />
       </div>
 
-      <div className="mx-24 py-10">
+      <div className="mx-24 py-10 min-[500px]:w-max">
         {courses?.map((element, i) => {
           return (
             <>
@@ -79,9 +79,9 @@ export const CoursesSection = () => {
                   </svg>
                 </div>
               )}
-              <div className="flex sm:flex-row bg-white rounded-md flex-col py-3 mb-3">
+              <div className="flex min-[1250px]:flex-row bg-white rounded-md flex-col py-3 mb-3">
                 {/* COL1 */}
-                <div className="basis-[12%] flex items-center justify-center">
+                <div className="basis-[12%] flex items-center justify-center p-1">
                   <img
                     src={element.course_image}
                     alt="course-image"
@@ -89,25 +89,25 @@ export const CoursesSection = () => {
                   />
                 </div>
                 {/* COL 2 */}
-                <div className="basis-[85%] flex flex-col sm:text-start text-center">
-                  <div className="font-semibold pt-4 text-lg">
+                <div className="basis-[85%] flex flex-col sm:text-start text-center px-2">
+                  <div className="font-semibold pt-4 text-lg max-[1250px]:text-center ">
                     {element.title}
                   </div>
 
-                  <div className="flex sm:flex-row bg-white rounded-md flex-col items-center  py-4 pe-5">
-                    <div className="bg-[#081838] text-sm py-2.5 rounded-md font-medium text-white w-[12rem] text-center">
+                  <div className="flex sm:flex-row bg-white rounded-md flex-col items-center py-1 pe-5 mx-auto">
+                    <div className="bg-[#081838] text-sm py-2.5 rounded-md font-medium text-white w-[12rem] text-center  max-[1250px]:ms-4 ">
                       % {element.duration} horas lectivas
                     </div>
-                    <div className="bg-[#081838] text-sm ms-[1rem] py-2.5 rounded-md font-medium text-white w-[12rem] text-center">
+                    <div className="bg-[#081838] text-sm ms-[1rem] py-2.5 rounded-md font-medium text-white w-[12rem] text-center my-4">
                       %{" "}
                       {element.is_limited_places
                         ? "Plazas ilimitadas"
                         : element.places_avaiables + " Plazas"}
                     </div>
-                    <div className="bg-[#081838] text-sm ms-[1rem] py-2.5 rounded-md font-medium text-white w-[12rem] text-center">
+                    <div className="bg-[#081838] text-sm ms-[1rem] py-2.5 rounded-md font-medium text-white w-[12rem] text-center max-[639px]:mb-5">
                       % Hasta {element.bonus} bonificable
                     </div>
-                    <div className="bg-[#ddff0f] text-xs ms-[1rem] py-2.5 rounded-md font-semibold w-[8rem] text-center ">
+                    <div className="bg-[#ddff0f] text-xs ms-[1rem] py-2.5 rounded-md font-semibold w-[8rem] text-center mt-1">
                       {(element.places_avaiables as number) < 10
                         ? "¡ÚLTIMAS PLAZAS!"
                         : element.places_avaiables + " Plazas Disponibles"}
