@@ -16,7 +16,6 @@ export const CoursesSection = () => {
     const data = await axios
       .get("http://127.0.0.1:3333/api/courses/show")
       .then((response) => response.data);
-    console.log(data);
 
     setCourses(data);
   };
