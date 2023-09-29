@@ -31,7 +31,7 @@ export const CoursesSection = () => {
   return (
     <div className="bg-[#081838] h-full py-3">
       <div className="text-center mt-20  ">
-        <h2 className="font-bold text-black text-4xl text-white">
+        <h2 className="font-bold text-4xl text-white">
           Últimas plazas{" "}
           <span
             className="
