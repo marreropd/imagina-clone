@@ -114,7 +114,7 @@ export const CoursesSection = () => {
                   </div>
                 </div>
                 {/* COL 3 */}
-                <div className="basis-1/6 flex items-center justify-center p-5">
+                <div className="basis-1/6 flex items-center justify-center p-5 whitespace-nowrap">
                   <div className="get-button-effect-blue bg-[#5c59e3] py-4 rounded-md font-semibold w-[10rem] text-center text-white">
                     ¡Me interesa!
                   </div>

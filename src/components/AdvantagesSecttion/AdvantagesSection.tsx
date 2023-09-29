@@ -54,7 +54,7 @@ export const AdvantagesSection = ({
       <div className="text-center p-14">
         <Link
           to={""}
-          className="get-button-effect-blue bg-[#081838] py-3 px-12 rounded-lg font-semibold text-white"
+          className="whitespace-nowrap get-button-effect-blue bg-[#081838] py-3 px-12 rounded-lg font-semibold text-white"
         >
           {buttonText}
         </Link>
